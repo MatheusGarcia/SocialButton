@@ -1,0 +1,192 @@
+<html>
+   <head>
+      <title></title>
+
+		<meta charset="utf-8">
+		
+	  <script language="javascript">
+	     function verifica(frmlogin)
+		 {
+	        if (document.forms[0].elements[0].value==""){
+	        alert ("Usuário não informado.");
+	        document.forms[0].elements[0].focus();
+	        return false;
+	     }
+		    else if (document.forms[0].elements[1].value=="")
+			{
+	           alert ("Senha não informada.");
+			   document.forms[0].elements[1].focus();
+			   return false;
+		    } else return true;
+	     }
+	      
+	  </script>
+	  <style>
+	  body {
+			
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ADD8E6', endColorstr='#fff'); /* IE */
+			background: -webkit-gradient(linear, left top, left bottom, from(#ADD8E6), to(#fff)); /* webkit browsers */
+			background: -moz-linear-gradient(top,  #ADD8E6,  #fff);
+		}
+	  div#login{
+       width: 550px;
+       height: 340px;
+       position: absolute;
+       left: 30%;
+       top: 30%;
+       background-color: #fff;
+       text-align: center;
+       overflow: auto;
+       -moz-box-shadow: 0px 0px 30px #000;
+       -webkit-box-shadow: 0px 0px 30px #000;
+       box-shadow: 0px 0px 30px #000;
+	   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	   color: #888;
+	   font-size: 14px;
+      }
+	  .botao {
+       -moz-box-shadow: 0px 0px 5px #999;
+       -webkit-box-shadow: 0px 0px 5px #999;
+       box-shadow: 0px 0px 5px #999;
+       -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+       border-radius: 4px;
+       background: #FEFEFE;
+       width: 60px;
+       height: 25px;
+       color: #666;
+       cursor: pointer;
+       border: 1px solid #AAA;
+       font-size: 13px;
+       font-family: Tahoma, Geneva, sans-serif;
+       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF', endColorstr='#CCC'); /* IE */
+       background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#CCC)); /* webkit browsers */
+       background: -moz-linear-gradient(top,  #FFF,  #CCC);
+      }
+      .campotxt{
+       -moz-box-shadow: 0px 0px 3px #999;
+       -webkit-box-shadow: 0px 0px 3px #999;
+       box-shadow: 0px 0px 3px #999;
+       -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+       border-radius: 3px;
+       padding-left: 6px;
+       color: #888;
+       width: 200px;
+       height: 30px;
+       padding-bottom: 1px;
+       font-size: 14px;
+       background: #FEFEFE;
+       border: 1px solid #AAA;
+       font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      }
+	  table{
+	   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	   color: #888;
+	   font-size: 14px;
+	  }
+
+	a {
+	 	text-decoration: none;
+	}
+	 
+	a:link
+	{
+	 font-style: normal;
+	 color: #888;
+	 font-size: 13px;
+	}
+		 
+	a:visited
+	{
+	 font-style: normal;
+	 color: #888;
+	 font-size: 13px;
+	}
+			
+	a:hover
+	{
+	 font-style: normal;
+	 color: #888;
+	 font-weight: bold;
+	}
+
+	  </style>
+   </head>
+   <body>
+	  <center>
+	  <div id="login">
+	  
+	  <form name="frmlogin" id="frmlogin" method="post" action="autentica_usuario.php" OnSubmit="">
+		 <div style="width: 100%; height: 160px">
+		 	<img src='include/imagens/logo10.png' width='410px' height='160px'>
+		 </div>
+		 <center>
+		 <div>
+			 <table border='0' style="width:100%;">
+			    <tr>
+			       <td align='right'>
+		              E-mail:&nbsp;
+			       </td>
+			       <td>
+			          <input class='campotxt' type="text" name="txtemail" id="txtemail" maxlength="255"/>
+			       </td>
+			    </tr>
+			    <tr>
+			       <td align='right'  style="width: 35%; padding-top: 8px;">
+				      Senha:&nbsp;
+				   </td>
+				   <td  style="padding-top: 8px;">
+			          <input class='campotxt' type = "password" name="pwdsenha" id="pwdsenha"  maxlength = "15"/>
+				   </td>
+				</tr>
+				<tr>
+					<td colspan='2'>&nbsp;</td></tr>
+				<tr>
+				   <td colspan='2' align='center'>
+			          <input class='botao' type = "reset" value = "Limpar"/>  &nbsp;
+			          <input class='botao' type = "button" value = "Entrar" onCLick="validaCampo()"/>
+				   </td>
+				</tr>
+				<tr>
+				   	<td colspan='2' align='center'>
+			       <!--    <a href="#"> Esqueceu sua senha? </a>    &nbsp;  &nbsp;  &nbsp;
+			        </td>
+			        <td>
+			          <a href="#"> É novo aqui? </a> -->
+			         	<div>
+							<table style="width:100%">
+								<tr>
+									<td style="width: 50%; text-align: center;">
+										<a href="#"> Esqueceu sua senha? </a>
+									</td>
+									<td style="text-align: center;" >
+										<a href="cadastros/usuario/cad_usuario.html"> É novo aqui? </a>
+									</td>
+								</tr>
+							
+							</table>
+			          	</div>
+				   </td>
+				</tr>
+			 </table>
+		 </div>
+		 </center>
+	  </form>
+	  </div>
+	  </center>
+	  <script type="text/javascript">
+	  		function validaCampo() {
+	  			if (document.getElementById("txtemail").value == "") {
+	  				alert("Favor preencher o campo E-mail");
+	  				document.getElementById("txtemail").focus();
+	  			} else if (document.getElementById("pwdsenha").value == "") {
+	  				alert("Favor preencher o campo Senha");
+	  				document.getElementById("pwdsenha").focus();
+	  			} else {
+	  				document.getElementById("frmlogin").submit();
+	  			}
+	  		}
+	  </script>
+	</body>
+</html>	
